@@ -66,5 +66,8 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      - name: Create Database
+        run: bin/rails db:prepare
+
       - name: Run tests
         run: bundle exec rspec
