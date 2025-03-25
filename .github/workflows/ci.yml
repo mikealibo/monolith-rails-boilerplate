@@ -3,7 +3,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: [ main ]
+    branches: [ development ]
 
 jobs:
   scan_ruby:
@@ -53,3 +53,37 @@ jobs:
       - name: Lint code for consistent style
         run: bin/rubocop -f github
 
+  test: 
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15.4
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: "password"
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --mount type=tmpfs,destination=/var/lib/postgresql/data
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - name: Create Database
+        run: bin/rails db:prepare
+
+      - name: Run tests
+        run: bundle exec rspec
