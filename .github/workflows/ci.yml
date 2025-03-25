@@ -61,7 +61,7 @@ jobs:
         image: postgres:15.4
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: "password"
+          POSTGRES_PASSWORD: password
           POSTGRES_DB: cms_test
         ports:
           - 5432:5432
