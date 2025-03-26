@@ -1,4 +1,11 @@
-// Import and register all your controllers from the importmap via controllers/**/*_controller
-import { application } from "controllers/application"
-import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
-eagerLoadControllersFrom("controllers", application)
+// Import and register all your controllers from the vite via controllers/**/*_controller
+import { Application } from "stimulus"
+import { registerControllers } from 'stimulus-vite-helpers'
+
+// Start the Stimulus application.
+const application = Application.start()
+
+// Controller files must be named *_controller.js.
+const controllers  = import.meta.glob('./**/*_controller.js', { eager: true })
+
+registerControllers(application, controllers)
