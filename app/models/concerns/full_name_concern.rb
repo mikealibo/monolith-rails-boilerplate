@@ -12,6 +12,6 @@ module FullNameConcern
   end
 
   def set_full_name
-    self.full_name = [first_name, middle_name, last_name].compact.join(' ').titleize
+    self.full_name = [ first_name, middle_name, last_name ].compact.join(" ").titleize
   end
 end
