@@ -25,4 +25,4 @@ import * as ActiveStorage from "@rails/activestorage";
 ActiveStorage.start();
 
 // Example: Import a stylesheet in app/frontend/index.css
-// import '~/index.css'
+import '../../assets/stylesheets/application.css'
