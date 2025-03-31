@@ -1,24 +1,13 @@
-# README
+# Monolith Rails Boilerplate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Installed packages
+- Powered with [Vite Rails](https://vite-ruby.netlify.app/guide/rails.html)
+- Authentication using [Devise Gem](https://github.com/heartcombo/devise)
+- Testing Framework with [RSpec](https://github.com/rspec/rspec-rails)
+- [Factory Bot Rails](https://github.com/thoughtbot/factory_bot_rails) for blueprint for creating test data
+- Process Manage using [Overmind](https://github.com/DarthSim/overmind)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Features
+- Separation between public and admin views with defined layouts
+- Configured paths within javascript entrypoints and 
+- Basic Authentication with complete devise modules
