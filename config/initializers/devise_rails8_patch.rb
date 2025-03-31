@@ -1,4 +1,4 @@
-require 'devise'
+require "devise"
 Devise # make sure it's already loaded
 
 module Devise
