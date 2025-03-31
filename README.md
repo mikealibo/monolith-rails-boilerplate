@@ -9,5 +9,4 @@
 
 ### Features
 - Separation between public and admin views with defined layouts
-- Configured paths within javascript entrypoints and 
 - Basic Authentication with complete devise modules
