@@ -7,6 +7,6 @@ FactoryBot.define do
     # Skipping email confirmation (specific to Devise)
     after(:build) do |user|
       user.skip_confirmation!
-    end 
+    end
   end
 end
