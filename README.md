@@ -5,7 +5,7 @@
 - Authentication using [Devise Gem](https://github.com/heartcombo/devise)
 - Testing Framework with [RSpec](https://github.com/rspec/rspec-rails)
 - [Factory Bot Rails](https://github.com/thoughtbot/factory_bot_rails) for blueprint for creating test data
-- Process Manage using [Overmind](https://github.com/DarthSim/overmind)
+- Process Manager using [Overmind](https://github.com/DarthSim/overmind)
 
 ### Features
 - Separation between public and admin views with defined layouts
