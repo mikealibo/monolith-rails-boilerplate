@@ -27,13 +27,13 @@ development_setup: &development_setup
 development:
   <<: *default
   <<: *development_setup
-  database: cms_development
+  database: monolith_rails_boilerplate_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: cms
+  #username: monolith_rails_boilerplate
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -62,7 +62,7 @@ development:
 test:
   <<: *default
   <<: *development_setup
-  database: cms_test
+  database: monolith_rails_boilerplate_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -87,18 +87,18 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: cms_production
-    username: cms
-    password: <%= ENV["CMS_DATABASE_PASSWORD"] %>
+    database: monolith_rails_boilerplate_production
+    username: monolith_rails_boilerplate
+    password: <%= ENV["MONOLITH_RAILS_BOILERPLATE_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
-    database: cms_production_cache
+    database: monolith_rails_boilerplate_production_cache
     migrations_paths: db/cache_migrate
   queue:
     <<: *primary_production
-    database: cms_production_queue
+    database: monolith_rails_boilerplate_production_queue
     migrations_paths: db/queue_migrate
   cable:
     <<: *primary_production
-    database: cms_production_cable
+    database: monolith_rails_boilerplate_production_cable
     migrations_paths: db/cable_migrate
