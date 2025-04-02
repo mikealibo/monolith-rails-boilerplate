@@ -11,7 +11,7 @@
 - Separation between public and admin views with defined layouts
 - Basic Authentication with complete devise modules
 
-### Commands
+### Development Commands
 `./bin/dev` - command for running the server
  - in `Procfile.dev` there are 3 types of commands that we run automatically
     - `vite` : for starting the vite development server
