@@ -18,8 +18,8 @@ Rails.application.configure do
   # Generate nonces for every request
   config.content_security_policy_nonce_directives = %w[script-src]
   config.content_security_policy_nonce_generator = ->(request) do
-    if request.env['HTTP_TURBO_REFERRER'].present?
-      request.env['HTTP_X_TURBO_NONCE']
+    if request.env["HTTP_TURBO_REFERRER"].present?
+      request.env["HTTP_X_TURBO_NONCE"]
     else
       SecureRandom.base64(16)
     end
