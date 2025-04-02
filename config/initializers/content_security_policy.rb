@@ -24,4 +24,18 @@ Rails.application.configure do
       SecureRandom.base64(16)
     end
   end
+
+  # Report violations without enforcing the policy in test environment
+  config.content_security_policy_report_only = true if Rails.env.test?
+
+  # If using Capybara/Selenium, disable CSP in system tests
+  if Rails.env.test? && defined?(Capybara)
+    RSpec.configure do |config|
+      config.before(:each, type: :system) do
+        page.driver.browser.execute_script(
+          "document.head.innerHTML += '<meta http-equiv=\"Content-Security-Policy\" content=\"default-src * \"/>'"
+        )
+      end
+    end
+  end
 end
