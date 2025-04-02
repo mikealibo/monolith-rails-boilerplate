@@ -10,3 +10,10 @@
 ### Features
 - Separation between public and admin views with defined layouts
 - Basic Authentication with complete devise modules
+
+### Commands
+`./bin/dev` - command for running the server
+ - in `Procfile.dev` there are 3 types of commands that we run automatically
+    - `vite` : for starting the vite development server
+    - `web` : running the rails server in port 3000
+    - `assets` : compiling assets once we do changes in resources
