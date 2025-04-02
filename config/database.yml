@@ -26,8 +26,8 @@ development_setup: &development_setup
 
 # if you were using render
 render_deployment_setup: &render_deployment_setup
-  host: <%= ENV["MONOLITH_RAILS_BOILERPLATE_HOST_NAME"] %> # additional configuration
-  port: 5432
+  host: <%= ENV["MONOLITH_RAILS_BOILERPLATE_HOST_NAME"] %>
+  port: <%= ENV["MONOLITH_RAILS_BOILERPLATE_PORT"] %>
 
 development:
   <<: *default
