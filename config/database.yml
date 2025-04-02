@@ -24,6 +24,11 @@ development_setup: &development_setup
   username: postgres
   password: password
 
+# if you were using render
+render_deployment_setup: &render_deployment_setup
+  host: <%= ENV["MONOLITH_RAILS_BOILERPLATE_HOST_NAME"] %> # additional configuration
+  port: 5432
+
 development:
   <<: *default
   <<: *development_setup
@@ -87,8 +92,9 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: monolith_rails_boilerplate_production
-    username: monolith_rails_boilerplate
+    <<: *render_deployment_setup
+    database: <%= ENV["MONOLITH_RAILS_BOILERPLATE_DB_NAME"] %> # default: monolith_rails_boilerplate_production
+    username: <%= ENV["MONOLITH_RAILS_BOILERPLATE_USERNAME"] %> # default: monolith_rails_boilerplate
     password: <%= ENV["MONOLITH_RAILS_BOILERPLATE_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
