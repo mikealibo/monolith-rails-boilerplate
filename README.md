@@ -17,3 +17,12 @@
     - `vite` : for starting the vite development server
     - `web` : running the rails server in port 3000
     - `assets` : compiling assets once we do changes in resources
+
+### Deployment
+ #### [Render](render.com)
+  Setup Environment Variables for these:
+  - `MONOLITH_RAILS_BOILERPLATE_HOST_NAME`
+  - `MONOLITH_RAILS_BOILERPLATE_PORT`
+  - `MONOLITH_RAILS_BOILERPLATE_DB_NAME`
+  - `MONOLITH_RAILS_BOILERPLATE_USERNAME`
+  - `MONOLITH_RAILS_BOILERPLATE_DATABASE_PASSWORD`
