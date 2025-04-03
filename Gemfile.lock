@@ -316,7 +316,13 @@ GEM
       rubocop-performance (>= 1.24)
       rubocop-rails (>= 2.30)
     ruby-progressbar (1.13.0)
+    ruby_http_client (3.5.5)
     securerandom (0.4.1)
+    sendgrid-actionmailer (3.2.0)
+      mail (~> 2.7)
+      sendgrid-ruby (~> 6.4)
+    sendgrid-ruby (6.7.0)
+      ruby_http_client (~> 3.4)
     solid_cable (3.0.7)
       actioncable (>= 7.2)
       activejob (>= 7.2)
@@ -412,6 +418,7 @@ DEPENDENCIES
   rails (~> 8.0.2)
   rspec-rails (~> 7.1.1)
   rubocop-rails-omakase
+  sendgrid-actionmailer
   solid_cable
   solid_cache
   solid_queue

@@ -63,4 +63,8 @@ group :development do
   gem "overmind"
 end
 
+group :production do
+  gem 'sendgrid-actionmailer'
+end
+
 gem "devise", "~> 4.9"
