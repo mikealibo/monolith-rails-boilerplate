@@ -3,8 +3,8 @@ class User < ApplicationRecord
   # :omniauthable
 
   # Enable these if working with the multi-user application
-  # :confirmable, :lockable, :timeoutable, :trackable, :registerable, :recoverable
-  devise :database_authenticatable, :rememberable, :validatable
+  # :lockable, :timeoutable, :trackable, :registerable, :recoverable
+  devise :database_authenticatable, :rememberable, :validatable, :confirmable
 
   include FullNameConcern # app/models/concerns/full_name_concern.rb
 end
