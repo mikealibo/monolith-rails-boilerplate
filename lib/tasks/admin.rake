@@ -1,4 +1,4 @@
-namespace :admin do
+namespace :user do
   desc "Create a user"
   task create: :environment do
     email = ENV["EMAIL"] || "admin@example.com"
