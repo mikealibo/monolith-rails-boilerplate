@@ -7,8 +7,8 @@ namespace :user do
     password = ENV["PASSWORD"] || "password"
 
     user = User.new(
-      email: email, 
-      password: password, 
+      email: email,
+      password: password,
       password_confirmation: password
     )
 
