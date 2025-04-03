@@ -1,9 +1,9 @@
 namespace :user do
-  # command: rake admin:create
-  # command: rake admin:create EMAIL="newadmin@example.com" PASSWORD="newsecurepassword"
+  # command: rake user:create
+  # command: rake user:create EMAIL="newadmin@example.com" PASSWORD="newsecurepassword"
   desc "Create a user"
   task create: :environment do
-    email = ENV["EMAIL"] || "admin@example.com"
+    email = ENV["EMAIL"] || "user@example.com"
     password = ENV["PASSWORD"] || "password"
 
     user = User.new(
