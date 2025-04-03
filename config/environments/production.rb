@@ -59,12 +59,12 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :sendgrid_actionmailer
   config.action_mailer.sendgrid_actionmailer_settings = {
-    api_key: ENV['SENDGRID_API_KEY'],
+    api_key: ENV["SENDGRID_API_KEY"],
     raise_delivery_errors: true
   }
 
   # Set host to be used by links generated in mailer templates.
-  config.action_mailer.default_url_options = { host: ENV['SITE_URL'] }
+  config.action_mailer.default_url_options = { host: ENV["SITE_URL"] }
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via rails credentials:edit.
   # config.action_mailer.smtp_settings = {
