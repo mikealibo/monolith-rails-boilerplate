@@ -64,7 +64,7 @@ group :development do
 end
 
 group :production do
-  gem 'sendgrid-actionmailer'
+  gem "sendgrid-actionmailer"
 end
 
 gem "devise", "~> 4.9"
