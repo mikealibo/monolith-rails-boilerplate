@@ -1,6 +1,7 @@
 # Monolith Rails Boilerplate
 
 ### Installed packages
+- CSS Framework using [TailwindCSS](https://tailwindcss.com/)
 - Powered with [Vite Rails](https://vite-ruby.netlify.app/guide/rails.html)
 - Authentication using [Devise Gem](https://github.com/heartcombo/devise)
 - Testing Framework with [RSpec](https://github.com/rspec/rspec-rails)
